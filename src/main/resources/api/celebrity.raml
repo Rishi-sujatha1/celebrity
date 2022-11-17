@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: celebrity
+baseUri: http://celebrity/api
+/celebrity:
+  get:
+    description: data retrive from target systems
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "name": "krishna",
+                "role": "hero",
+                "noofmoveis": "360",
+                "address": "hyderabad",
+                "number": "799987999"
+              }
+  post:
+    description: data created from target systems
+    body:
+      application/json:
+        example:
+          {
+            "name": "mahesh",
+            "father": "krishna",
+            "role": "hero"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "response": "data created succesflly"
+              }
+    
